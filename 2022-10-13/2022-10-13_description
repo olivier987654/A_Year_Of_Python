@@ -1,0 +1,7 @@
+This is a small python project that is using the OpenWeatherAPI to get the weather in the city of your choice.
+
+Requirements
+
+Modules: 
+
+Requests.
