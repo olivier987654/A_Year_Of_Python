@@ -12,3 +12,7 @@ dice_roll = random.randint(1, dice_sides)
 # Print the result
 
 print("You rolled a " + str(dice_roll))
+
+# UI for the dice roller
+
+print("Welcome to the dice roller!")
