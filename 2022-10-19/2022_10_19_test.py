@@ -96,4 +96,6 @@ for item in items:
     track_artists.append(item['artists'][0]['name'])
     track_ids.append(item['id'])
 
+    
+
 
