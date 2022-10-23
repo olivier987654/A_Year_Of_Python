@@ -1,0 +1,9 @@
+2022/10/23
+
+This is a Python Script to help your extract text from a PDF file
+
+Requirements : 
+
+Python3
+
+PyPDF2
