@@ -1,0 +1,56 @@
+## Python Web Browser with PyQt5
+
+import sys
+from PyQt5.QtWidgets import QApplication, QMainWindow, QToolBar, QAction, QLineEdit, QProgressBar, QMenu, QMenuBar, QTabWidget, QWidget, QVBoxLayout, QShortcut
+from PyQt5.QtCore import QUrl, Qt
+from PyQt5.QtWebEngineWidgets import QWebEngineView, QWebEnginePage
+from PyQt5.QtGui import QIcon, QKeySequence
+
+class MainWindow(QMainWindow):
+    def __init__(self):
+        super(MainWindow, self).__init__()
+        self.setWindowTitle("The Python Browser - PyQt5")
+        self.setWindowIcon(QIcon('icon.png'))
+        self.setGeometry(0, 0, 1280, 720)
+        self.showMaximized()
+
+        self.tabWidget = QTabWidget()
+        self.tabWidget.setDocumentMode(True)
+        self.tabWidget.setTabsClosable(True)
+        self.tabWidget.tabCloseRequested.connect(self.closeTab)
+        self.setCentralWidget(self.tabWidget)
+
+        self.addNewTab(QUrl('https://google.com'), 'Homepage')
+
+        self.show()
+
+    def addNewTab(self, qurl=QUrl(''), label="Blank"):
+        if qurl.isEmpty():
+            qurl = QUrl('https://google.com')
+
+        browser = QWebEngineView()
+        browser.setUrl(qurl)
+
+        i = self.tabWidget.addTab(browser, label)
+        self.tabWidget.setCurrentIndex(i)
+
+        browser.urlChanged.connect(lambda qurl, browser=browser:
+                                   self.updateUrlBar(qurl, browser))
+        browser.loadFinished.connect(lambda _, i=i, browser=browser:
+                                     self.tabWidget.setTabText(i, browser.page().title()))
+
+    def closeTab(self, i):
+        if self.tabWidget.count() < 2:
+            return
+
+        self.tabWidget.removeTab(i)
+
+    def updateUrlBar(self, q, browser=None):
+        if browser != self.tabWidget.currentWidget():
+            return
+
+        self.urlBar.setText(q.toString())
+        self.urlBar.setCursorPosition(0)
+
+
+        
