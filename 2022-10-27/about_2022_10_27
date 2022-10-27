@@ -1,0 +1,20 @@
+About this project
+
+2022-10-27
+
+This is a project that gives you the ability to scan open ports from a specific IP Adress. It is a simple project that I made for fun and to learn more about sockets and how they work. I hope you enjoy it and if you have any questions or suggestions, feel free to contact me.
+
+This project is made in Python 3.11 and it uses the socket library.
+
+How to use
+
+To use this project, you need to have Python 3.11 installed on your computer. You can download it from here. After you have installed Python, you can run the project by opening the terminal and typing:
+
+python3.11 2022_10_27.py followed by the IP Adress you want to scan.
+
+Example:
+
+python3.11 2022_10_27.py "IP Adress"
+
+The project will then scan the IP Adress and print out the open ports.
+
