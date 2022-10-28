@@ -1,0 +1,18 @@
+About this Script
+
+This script is a rock, paper, scisor game created with python.
+
+How to use
+
+To use this script, you need to have python installed on your computer. You can download it here.
+
+After you have installed python, you can run the script by opening the terminal and typing:
+
+python rock_paper_scissors.py
+
+The script will ask you to choose between rock, paper or scissors. You can type your choice and press enter. The script will then choose a random choice and compare it to yours. It will then tell you if you won, lost or if it was a draw.
+
+You can play as many times as you want. To stop the script, you can press ctrl + c.
+
+
+
