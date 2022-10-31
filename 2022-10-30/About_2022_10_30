@@ -1,0 +1,11 @@
+2022_10_30
+
+This script allows you to scrape data from a specific URL and print it in the terminal console.
+
+The script is written in Python and uses the BeautifulSoup library.
+
+Requirements
+
+-Python 3.6+
+
+-BeautifulSoup
