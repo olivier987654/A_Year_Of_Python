@@ -1,0 +1,7 @@
+This is a file about the project of today.
+
+This is a project that gives you a Fruit depending on the value you input using a hashmap that associate 5 int to 5 fruits.
+
+Requirements :
+
+Python 3.6.5+
