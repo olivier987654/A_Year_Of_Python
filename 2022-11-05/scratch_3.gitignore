@@ -1,0 +1,5 @@
+Python Project of 2022-11-05
+
+This is a project to get the price of a stock using alphavantage API
+
+You can input the stock ticker and the program will return the price of the stock in the console.
